@@ -11,6 +11,10 @@ baseline, a local terrain view, and a standard street map.
 > a limited, preloaded DEM library. It is not a live positioning system, a
 > verified navigation aid, or safe for operational use.
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://swezz-terrainmatch-tan-app-s8koxn.streamlit.app/)
+
+**Live demo:** [Try TerrainMatch-TAN](https://swezz-terrainmatch-tan-app-s8koxn.streamlit.app/)
+
 ## Project highlights
 
 - Builds georeferenced terrain patches from SRTM GeoTIFF elevation data.
