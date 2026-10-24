@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import math
 import random
+import numpy as np
 
 Terrain = list[list[float]]
 
@@ -69,3 +70,56 @@ def _shape(terrain: list[list[float]]) -> tuple[int, int]:
     if any(len(row) != width for row in terrain):
         raise ValueError("terrain must be a non-empty rectangular grid")
     return len(terrain), width
+
+
+def normalize_patch(patch: np.ndarray, eps: float = 1e-8) -> np.ndarray:
+    """Convert an elevation array to finite float32 values in [0, 1]."""
+    values = np.asarray(patch, dtype=np.float32)
+    finite = np.isfinite(values)
+    if not finite.any():
+        raise ValueError("patch must contain at least one finite elevation")
+    fill = float(values[finite].mean())
+    values = np.where(finite, values, fill)
+    low, high = float(values.min()), float(values.max())
+    if high - low <= eps:
+        return np.zeros_like(values, dtype=np.float32)
+    return ((values - low) / (high - low)).astype(np.float32)
+
+
+def simulate_observation(
+    reference_patch: np.ndarray,
+    *,
+    noise_std: float = 0.0,
+    row_displacement: int = 0,
+    col_displacement: int = 0,
+    crop_size: int | None = None,
+    rng: np.random.Generator | None = None,
+    seed: int | None = None,
+) -> tuple[np.ndarray, int, int]:
+    """Extract a displaced DEM window and add reproducible Gaussian noise.
+
+    Noise is in the same elevation units as ``reference_patch``. This is a
+    synthetic disturbance model and does not model a specific sensor.
+    Displacements specify the crop's upper-left pixel in the parent array.
+    """
+    values = np.asarray(reference_patch, dtype=np.float32)
+    if values.ndim != 2 or min(values.shape) == 0:
+        raise ValueError("reference_patch must be a non-empty 2-D array")
+    if noise_std < 0:
+        raise ValueError("noise_std must be non-negative")
+    if crop_size is None:
+        crop_size = min(values.shape) // 2
+    if crop_size < 1 or crop_size > min(values.shape):
+        raise ValueError("crop_size must fit within the reference patch")
+    row = int(np.clip(row_displacement, 0, values.shape[0] - crop_size))
+    col = int(np.clip(col_displacement, 0, values.shape[1] - crop_size))
+    observation = values[row:row + crop_size, col:col + crop_size].copy()
+    if not np.isfinite(observation).all():
+        valid = observation[np.isfinite(observation)]
+        if not valid.size:
+            raise ValueError("observation window has no finite elevation cells")
+        observation = np.where(np.isfinite(observation), observation, float(valid.mean()))
+    if noise_std:
+        generator = rng if rng is not None else np.random.default_rng(seed)
+        observation += generator.normal(0.0, noise_std, observation.shape).astype(np.float32)
+    return observation, row, col

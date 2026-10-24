@@ -1,0 +1,402 @@
+[
+  {
+    "name": "australia-blue-mountains",
+    "south": -33.8,
+    "north": -33.3,
+    "west": 150.2,
+    "east": 150.7,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "australia-kimberley",
+    "south": -17.0,
+    "north": -16.5,
+    "west": 124.0,
+    "east": 124.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "australia-flinders",
+    "south": -32.8,
+    "north": -32.3,
+    "west": 138.0,
+    "east": 138.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "australia-great-dividing-range",
+    "south": -37.5,
+    "north": -37.0,
+    "west": 147.0,
+    "east": 147.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "spain-pyrenees",
+    "south": 42.5,
+    "north": 43.0,
+    "west": 0.5,
+    "east": 1.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "spain-sierra-nevada",
+    "south": 37.0,
+    "north": 37.5,
+    "west": -3.5,
+    "east": -3.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "portugal-serra-da-estrela",
+    "south": 40.2,
+    "north": 40.7,
+    "west": -7.8,
+    "east": -7.3,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "portugal-madeira",
+    "south": 32.7,
+    "north": 33.2,
+    "west": -17.2,
+    "east": -16.7,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "brazil-chapada-diamantina",
+    "south": -12.7,
+    "north": -12.2,
+    "west": -41.5,
+    "east": -41.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "brazil-amazon",
+    "south": -3.5,
+    "north": -3.0,
+    "west": -60.5,
+    "east": -60.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "brazil-serra-do-mar",
+    "south": -23.5,
+    "north": -23.0,
+    "west": -45.0,
+    "east": -44.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "brazil-chapada-dos-veadeiros",
+    "south": -14.3,
+    "north": -13.8,
+    "west": -47.7,
+    "east": -47.2,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "germany-black-forest",
+    "south": 48.0,
+    "north": 48.5,
+    "west": 8.0,
+    "east": 8.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "germany-bavarian-alps",
+    "south": 47.4,
+    "north": 47.9,
+    "west": 11.0,
+    "east": 11.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "argentina-mendoza-andes",
+    "south": -33.5,
+    "north": -33.0,
+    "west": -69.5,
+    "east": -69.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "argentina-bariloche",
+    "south": -41.5,
+    "north": -41.0,
+    "west": -71.8,
+    "east": -71.3,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "argentina-salta",
+    "south": -24.5,
+    "north": -24.0,
+    "west": -66.5,
+    "east": -66.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "canada-banff",
+    "south": 51.0,
+    "north": 51.5,
+    "west": -116.0,
+    "east": -115.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "canada-jasper",
+    "south": 52.5,
+    "north": 53.0,
+    "west": -118.0,
+    "east": -117.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "canada-british-columbia",
+    "south": 53.5,
+    "north": 54.0,
+    "west": -121.0,
+    "east": -120.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "canada-laurentians",
+    "south": 46.5,
+    "north": 47.0,
+    "west": -74.0,
+    "east": -73.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "south-africa-drakensberg",
+    "south": -29.5,
+    "north": -29.0,
+    "west": 29.0,
+    "east": 29.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "south-africa-cape-fold",
+    "south": -33.8,
+    "north": -33.3,
+    "west": 19.0,
+    "east": 19.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "south-africa-kruger",
+    "south": -24.5,
+    "north": -24.0,
+    "west": 31.5,
+    "east": 32.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "usa-colorado-rockies",
+    "south": 39.0,
+    "north": 39.5,
+    "west": -106.0,
+    "east": -105.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "usa-appalachians",
+    "south": 35.5,
+    "north": 36.0,
+    "west": -83.5,
+    "east": -83.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "usa-utah-canyonlands",
+    "south": 37.0,
+    "north": 37.5,
+    "west": -111.5,
+    "east": -111.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "mexico-sierra-madre",
+    "south": 25.0,
+    "north": 25.5,
+    "west": -106.0,
+    "east": -105.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "mexico-trans-mexican-volcanic-belt",
+    "south": 19.0,
+    "north": 19.5,
+    "west": -99.5,
+    "east": -99.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "japan-japanese-alps",
+    "south": 36.0,
+    "north": 36.5,
+    "west": 137.5,
+    "east": 138.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "japan-mount-fuji",
+    "south": 35.1,
+    "north": 35.6,
+    "west": 138.5,
+    "east": 139.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "japan-kyushu",
+    "south": 32.5,
+    "north": 33.0,
+    "west": 130.5,
+    "east": 131.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "indonesia-java",
+    "south": -7.5,
+    "north": -7.0,
+    "west": 110.0,
+    "east": 110.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "indonesia-sumatra",
+    "south": -0.5,
+    "north": 0.0,
+    "west": 100.0,
+    "east": 100.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "new-zealand-southern-alps",
+    "south": -44.0,
+    "north": -43.5,
+    "west": 169.5,
+    "east": 170.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "new-zealand-tongariro",
+    "south": -39.5,
+    "north": -39.0,
+    "west": 175.5,
+    "east": 176.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "new-zealand-fiordland",
+    "south": -45.0,
+    "north": -44.5,
+    "west": 167.0,
+    "east": 167.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "italy-dolomites",
+    "south": 46.4,
+    "north": 46.9,
+    "west": 11.7,
+    "east": 12.2,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "italy-mount-etna",
+    "south": 37.5,
+    "north": 38.0,
+    "west": 14.9,
+    "east": 15.4,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "france-french-alps",
+    "south": 45.8,
+    "north": 46.3,
+    "west": 6.5,
+    "east": 7.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "france-pyrenees",
+    "south": 42.7,
+    "north": 43.2,
+    "west": 0.0,
+    "east": 0.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "kenya-mount-kenya",
+    "south": -0.2,
+    "north": 0.3,
+    "west": 37.0,
+    "east": 37.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "tanzania-kilimanjaro",
+    "south": -3.5,
+    "north": -3.0,
+    "west": 37.0,
+    "east": 37.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "namibia-brandberg",
+    "south": -21.2,
+    "north": -20.7,
+    "west": 14.3,
+    "east": 14.8,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "namibia-namib-desert",
+    "south": -24.0,
+    "north": -23.5,
+    "west": 15.0,
+    "east": 15.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "austria-tyrol",
+    "south": 47.0,
+    "north": 47.5,
+    "west": 10.5,
+    "east": 11.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "norway-telemark",
+    "south": 59.0,
+    "north": 59.5,
+    "west": 8.0,
+    "east": 8.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "sweden-scanian-highlands",
+    "south": 56.0,
+    "north": 56.5,
+    "west": 13.0,
+    "east": 13.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "greece-pindus-mountains",
+    "south": 39.5,
+    "north": 40.0,
+    "west": 20.5,
+    "east": 21.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "chile-atacama-andes",
+    "south": -23.5,
+    "north": -23.0,
+    "west": -68.5,
+    "east": -68.0,
+    "dem_type": "SRTMGL3"
+  }
+]

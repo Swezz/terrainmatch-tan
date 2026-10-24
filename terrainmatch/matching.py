@@ -5,6 +5,9 @@ from __future__ import annotations
 from dataclasses import dataclass
 import math
 
+import numpy as np
+import numpy.typing as npt
+
 from .simulation import _shape
 
 
@@ -19,6 +22,15 @@ class MatchResult:
 
     row_offset: int
     col_offset: int
+    score: float
+
+
+@dataclass(frozen=True)
+class WindowMatchResult:
+    """Best observation window location within a larger reference grid."""
+
+    row: int
+    col: int
     score: float
 
 
@@ -67,6 +79,58 @@ def normalized_cross_correlation(
                 best = MatchResult(dr, dc, score)
     if best is None:
         raise ValueError("no candidate offset meets min_overlap")
+    return best
+
+
+def sliding_window_ncc(
+    reference: npt.ArrayLike,
+    observation: npt.ArrayLike,
+) -> WindowMatchResult:
+    """Locate an observation-sized window in a larger reference grid using NCC.
+
+    The observation is compared with every fully overlapping reference window.
+    Returned row and column values are the top-left pixel of the best window.
+    Ties resolve to the first candidate in row-major order.
+    """
+    reference_array = np.asarray(reference, dtype=np.float64)
+    observation_array = np.asarray(observation, dtype=np.float64)
+    if reference_array.ndim != 2 or observation_array.ndim != 2:
+        raise ValueError("reference and observation must be 2-D arrays")
+    ref_height, ref_width = reference_array.shape
+    obs_height, obs_width = observation_array.shape
+    if obs_height > ref_height or obs_width > ref_width:
+        raise ValueError("observation must fit inside the reference grid")
+    if not np.isfinite(reference_array).all() or not np.isfinite(observation_array).all():
+        raise ValueError("reference and observation must contain only finite values")
+
+    observation_centered = observation_array - observation_array.mean()
+    observation_variance = float(np.sum(observation_centered ** 2))
+    if observation_variance == 0.0:
+        return WindowMatchResult(0, 0, 0.0)
+
+    windows = np.lib.stride_tricks.sliding_window_view(
+        reference_array, observation_array.shape
+    )
+    best = WindowMatchResult(0, 0, -math.inf)
+    for row in range(windows.shape[0]):
+        row_windows = windows[row]
+        centered = row_windows - row_windows.mean(axis=(1, 2), keepdims=True)
+        covariance = np.einsum(
+            "ijk,jk->i", centered, observation_centered, optimize=True
+        )
+        reference_variance = np.sum(centered ** 2, axis=(1, 2))
+        denominator = np.sqrt(reference_variance * observation_variance)
+        scores = np.divide(
+            covariance,
+            denominator,
+            out=np.zeros_like(covariance),
+            where=denominator > 0.0,
+        )
+        col = int(np.argmax(scores))
+        score = float(scores[col])
+        if score > best.score:
+            best = WindowMatchResult(row, col, score)
+
     return best
 
 

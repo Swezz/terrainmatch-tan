@@ -1,0 +1,14 @@
+{
+  "epochs": 30,
+  "batch_size": 32,
+  "lr": 0.001,
+  "embedding_dim": 128,
+  "margin": 1.0,
+  "pair_noise_std": 0.02,
+  "smoke_test": false,
+  "seed": 42,
+  "train_patches": 710,
+  "val_patches": 177,
+  "train_pairs": 11360,
+  "val_pairs": 1416
+}

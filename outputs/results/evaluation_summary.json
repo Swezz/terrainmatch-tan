@@ -1,0 +1,41 @@
+{
+  "cnn": {
+    "top1_accuracy": 0.018361581920903956,
+    "top3_accuracy": 0.052259887005649715,
+    "mean_query_time_ms": 17.107446612540297,
+    "n_test_patches": 177,
+    "n_gallery_patches": 887,
+    "n_regions": 52,
+    "n_queries": 708,
+    "search_stride_px": 16,
+    "mean_position_error_px_when_patch_correct": 16.70523987134387,
+    "noise_results": {
+      "0.0": {
+        "top1_accuracy": 0.06779661016949153,
+        "top3_accuracy": 0.15254237288135594,
+        "mean_position_error_px": 10.759276539705418
+      },
+      "0.01": {
+        "top1_accuracy": 0.005649717514124294,
+        "top3_accuracy": 0.02824858757062147,
+        "mean_position_error_px": 88.05679985100527
+      },
+      "0.02": {
+        "top1_accuracy": 0.0,
+        "top3_accuracy": 0.01694915254237288,
+        "mean_position_error_px": null
+      },
+      "0.05": {
+        "top1_accuracy": 0.0,
+        "top3_accuracy": 0.011299435028248588,
+        "mean_position_error_px": null
+      }
+    }
+  },
+  "ncc": {
+    "exact_match_rate": 1.0,
+    "mean_error_pixels": 0.0,
+    "median_error_pixels": 0.0
+  },
+  "scope": "Synthetic displaced-window benchmark on 887 DEM-derived patches across 52 regions. Queries use an 80/20 random patch-level split; the gallery includes the full reference map. Nearby patches may be geographically correlated. NCC uses controlled synthetic translations. These results are not validation on real sensor data or unseen geographic regions."
+}

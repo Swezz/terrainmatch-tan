@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 *.pyd
+*.egg-info/
+dist/
+build/
 
 # Virtual environments
 .venv/
@@ -12,13 +15,74 @@ env/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
 
 # Local environment variables and secrets
 .env
 .env.*
+.streamlit/secrets.toml
+.streamlit/secrets.*.toml
+.envrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.ppk
+credentials.*
+secrets.*
+
+# Local logs and editor settings
+*.log
+logs/
+.vscode/
+.idea/
+*.code-workspace
 
 # Generated outputs and local datasets
-outputs/
-data/*.tif
-data/*.tiff
+# The active dataset and model are included so a clone can run the demo.
+# outputs/
+
+# Obsolete single-file output from the early prototype.
+outputs/darjeeling_patch.npy
+outputs/darjeeling_patch.png
+outputs/dem_preview.png
+outputs/ncc_test_patches.png
+
+# Legacy patches not referenced by the active manifest.
+outputs/terrain_dataset/darjeeling_patch_01.npy
+outputs/terrain_dataset/darjeeling_patch_02.npy
+outputs/terrain_dataset/darjeeling_patch_03.npy
+outputs/terrain_dataset/darjeeling_patch_04.npy
+outputs/terrain_dataset/darjeeling_patch_05.npy
+outputs/terrain_dataset/darjeeling_patch_06.npy
+outputs/terrain_dataset/darjeeling_patch_07.npy
+outputs/terrain_dataset/darjeeling_patch_08.npy
+outputs/terrain_dataset/darjeeling_patch_09.npy
+outputs/terrain_dataset/darjeeling_patch_10.npy
+outputs/terrain_dataset/nepal_patch_01.npy
+outputs/terrain_dataset/nepal_patch_02.npy
+outputs/terrain_dataset/nepal_patch_03.npy
+outputs/terrain_dataset/nepal_patch_04.npy
+outputs/terrain_dataset/nepal_patch_05.npy
+outputs/terrain_dataset/nepal_patch_06.npy
+outputs/terrain_dataset/nepal_patch_07.npy
+outputs/terrain_dataset/nepal_patch_08.npy
+outputs/terrain_dataset/nepal_patch_09.npy
+outputs/terrain_dataset/nepal_patch_10.npy
+
+# Optional formats not used by the current GeoTIFF dataset.
 data/*.hgt
+data/*.nc
+
+# Keep the current demo checkpoint in Git so CNN inference works after clone.
+models/*.pth
+models/*.bin
+
+# OS and editor artefacts
+.DS_Store
+Thumbs.db
+*.swp
+*.bak
+
+# Jupyter notebooks (if any)
+.ipynb_checkpoints/

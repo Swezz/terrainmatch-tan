@@ -1,0 +1,162 @@
+[
+  {
+    "name": "sikkim-gangtok",
+    "south": 27.1,
+    "north": 27.9,
+    "west": 88.0,
+    "east": 88.9,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "himachal-shimla",
+    "south": 31.0,
+    "north": 32.0,
+    "west": 77.0,
+    "east": 78.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "uttarakhand-chamoli",
+    "south": 30.0,
+    "north": 31.0,
+    "west": 79.0,
+    "east": 80.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "ladakh-leh",
+    "south": 34.0,
+    "north": 35.0,
+    "west": 77.0,
+    "east": 78.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "arunachal-tawang",
+    "south": 27.3,
+    "north": 28.3,
+    "west": 91.5,
+    "east": 92.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "bhutan",
+    "south": 27.0,
+    "north": 28.0,
+    "west": 89.0,
+    "east": 90.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "nepal-annapurna",
+    "south": 28.0,
+    "north": 29.0,
+    "west": 83.5,
+    "east": 84.5,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "western-ghats-kerala",
+    "south": 10.0,
+    "north": 11.0,
+    "west": 76.0,
+    "east": 77.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "western-ghats-karnataka",
+    "south": 13.0,
+    "north": 14.0,
+    "west": 74.0,
+    "east": 75.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "western-ghats-maharashtra",
+    "south": 17.0,
+    "north": 18.0,
+    "west": 73.0,
+    "east": 74.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "eastern-ghats-araku",
+    "south": 17.0,
+    "north": 18.0,
+    "west": 82.0,
+    "east": 83.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "eastern-ghats-odisha",
+    "south": 19.0,
+    "north": 20.0,
+    "west": 83.0,
+    "east": 84.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "nilgiri-tamil-nadu",
+    "south": 11.0,
+    "north": 12.0,
+    "west": 76.0,
+    "east": 77.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "madurai-tamil-nadu",
+    "south": 9.0,
+    "north": 10.0,
+    "west": 77.0,
+    "east": 78.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "kolkata-ganges-delta",
+    "south": 22.5,
+    "north": 23.5,
+    "west": 88.0,
+    "east": 89.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "thar-rajasthan",
+    "south": 26.0,
+    "north": 27.0,
+    "west": 71.0,
+    "east": 72.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "sahara-morocco",
+    "south": 29.0,
+    "north": 30.0,
+    "west": -7.0,
+    "east": -6.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "sahara-algeria",
+    "south": 24.0,
+    "north": 25.0,
+    "west": 2.0,
+    "east": 3.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "swiss-alps",
+    "south": 46.0,
+    "north": 47.0,
+    "west": 8.0,
+    "east": 9.0,
+    "dem_type": "SRTMGL3"
+  },
+  {
+    "name": "andes-peru",
+    "south": -13.0,
+    "north": -12.0,
+    "west": -72.0,
+    "east": -71.0,
+    "dem_type": "SRTMGL3"
+  }
+]

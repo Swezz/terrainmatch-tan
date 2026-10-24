@@ -3,6 +3,7 @@ import unittest
 from terrainmatch import (
     generate_synthetic_terrain,
     normalized_cross_correlation,
+    sliding_window_ncc,
     shift_terrain,
 )
 
@@ -32,6 +33,22 @@ class TerrainMatchingTests(unittest.TestCase):
         result = normalized_cross_correlation(reference, reference, max_offset=4)
         self.assertEqual((result.row_offset, result.col_offset), (0, 0))
         self.assertAlmostEqual(result.score, 1.0, places=10)
+
+    def test_sliding_window_ncc_recovers_observation_location(self):
+        reference = generate_synthetic_terrain(size=40, seed=31)
+        observation = [
+            [reference[r][c] for c in range(9, 19)]
+            for r in range(13, 23)
+        ]
+
+        result = sliding_window_ncc(reference, observation)
+
+        self.assertEqual((result.row, result.col), (13, 9))
+        self.assertAlmostEqual(result.score, 1.0, places=10)
+
+    def test_sliding_window_ncc_rejects_observation_larger_than_reference(self):
+        with self.assertRaises(ValueError):
+            sliding_window_ncc([[1.0]], [[1.0, 2.0]])
 
 
 if __name__ == "__main__":
